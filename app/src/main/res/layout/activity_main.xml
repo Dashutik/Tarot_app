@@ -6,18 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="185dp"
-        android:layout_height="195dp"
-        android:text="Изучение карт"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="433dp" />
+    <ImageView
+        android:id="@+id/cardImageView"
+        android:layout_width="278dp"
+        android:layout_height="455dp"
+        android:contentDescription="Карта Таро"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
         android:text="Привет, погадаем?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +32,8 @@
         android:layout_width="185dp"
         android:layout_height="195dp"
         android:text="Ежедневное предсказание"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
