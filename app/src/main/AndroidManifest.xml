@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tarot_Beta"
         tools:targetApi="31">
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".ResultActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
