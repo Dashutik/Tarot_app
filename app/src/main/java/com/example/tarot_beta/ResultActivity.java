@@ -2,6 +2,7 @@ package com.example.tarot_beta;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -26,4 +27,8 @@ public class ResultActivity extends AppCompatActivity {
             finish();
         });
     }
+    public void backToMain(View v) {
+        Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+        startActivity(intent);
+    };
 }
