@@ -23,34 +23,74 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/intersect" />
+
     <ImageView
         android:id="@+id/cardImageView"
-        android:layout_width="168dp"
-        android:layout_height="225dp"
-        android:layout_marginTop="-150dp"
+        android:layout_width="285dp"
+        android:layout_height="428dp"
+        android:layout_marginTop="-200dp"
         android:contentDescription="Карта Таро"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668" />
+        app:layout_constraintVertical_bias="0.584" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="59dp"
         android:layout_height="61dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="275dp"
         android:layout_marginBottom="563dp"
         android:onClick="backToMain"
         app:icon="@drawable/left_7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@+id/cardNameTextView"
+        android:layout_width="263dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/alientz_trial_serif"
+        android:textAlignment="center"
+        android:textColor="#D5CBCB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardImageView"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/cardDescriptionTextView"
+        android:layout_width="314dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/alientz_trial_serif"
+        android:textAlignment="center"
+        android:textColor="#DED5D5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNameTextView"
+        app:layout_constraintVertical_bias="0.75" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
