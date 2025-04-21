@@ -18,7 +18,7 @@ public class ResultActivity extends AppCompatActivity {
         TextView resultTextView = findViewById(R.id.resultTextView);
         Button restartButton = findViewById(R.id.restartButton);
 
-        int correctAnswersCount = getIntent().getIntExtra("correctAnswersCount", 0);
+        int correctAnswersCount = getIntent().getIntExtra("correctAnswersCount", 4);
         resultTextView.setText("Правильных ответов: " + correctAnswersCount);
 
         restartButton.setOnClickListener(v -> {
