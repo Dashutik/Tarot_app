@@ -11,13 +11,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class PredictionActivity extends AppCompatActivity {
-    private ImageView cardImageView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_prediction);
+
+        ViewPager2 viewPager = findViewById(R.id.cardImageView);
+
+        List<Slide> slides = Arrays.asList(
+                new Slide(R.drawable.coins01, "Текст для первого изображения"),
+                new Slide(R.drawable.coins02, "Текст для второго изображения"),
+                new Slide(R.drawable.coins03, "Текст для третьего изображения")
+        );
+
+        viewPager.setAdapter(new SlidePagerAdapter(this, slides));
+    }
+    /*private ImageView cardImageView;
     private TextView cardNameTextView, cardDescriptionTextView;
 
     @Override
@@ -50,7 +68,7 @@ public class PredictionActivity extends AppCompatActivity {
         cardImageView.setImageResource(imageResId);
         cardNameTextView.setText(cardNames[randomIndex]);
         cardDescriptionTextView.setText(cardDescriptions[randomIndex]);
-    }
+    }*/
     public void backToMain(View v) {
         Intent intent = new Intent(PredictionActivity.this, MainActivity.class);
         startActivity(intent);
