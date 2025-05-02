@@ -1,74 +1,49 @@
 package com.example.tarot_beta;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.widget.TextView;
-
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class PredictionActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prediction);
+
 
         ViewPager2 viewPager = findViewById(R.id.cardImageView);
-
-        List<Slide> slides = Arrays.asList(
-                new Slide(R.drawable.coins01, "Текст для первого изображения"),
-                new Slide(R.drawable.coins02, "Текст для второго изображения"),
-                new Slide(R.drawable.coins03, "Текст для третьего изображения")
-        );
-
-        viewPager.setAdapter(new SlidePagerAdapter(this, slides));
-    }
-    /*private ImageView cardImageView;
-    private TextView cardNameTextView, cardDescriptionTextView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_prediction);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        showRandomTarotCard();
-
-    }
-    private void showRandomTarotCard() {
-        TypedArray cardImages = getResources().obtainTypedArray(R.array.tarot_card_images);
-
+        @SuppressLint("Recycle") TypedArray imageArray = getResources().obtainTypedArray(R.array.tarot_card_images);
         String[] cardNames = getResources().getStringArray(R.array.tarot_card_names);
         String[] cardDescriptions = getResources().getStringArray(R.array.tarot_card_descriptions);
 
-        Random random = new Random();
-        int randomIndex = random.nextInt(cardImages.length());
+        List<Slide> slides = new ArrayList<>();
 
-        cardImageView = findViewById(R.id.cardImageView);
-        cardNameTextView = findViewById(R.id.cardNameTextView);
-        cardDescriptionTextView = findViewById(R.id.cardDescriptionTextView);
+        List<Integer> allIndices = new ArrayList<>();
+        for (int i = 0; i < imageArray.length(); i++) {
+            allIndices.add(i);
+            Collections.shuffle(allIndices);
+        }
 
-        int imageResId = cardImages.getResourceId(randomIndex, -1);
-        cardImageView.setImageResource(imageResId);
-        cardNameTextView.setText(cardNames[randomIndex]);
-        cardDescriptionTextView.setText(cardDescriptions[randomIndex]);
-    }*/
+        for (int i = 0; i < 3; i++) {
+            int randomIndex = allIndices.get(i);
+            int imageResId = imageArray.getResourceId(randomIndex, -1);
+            if (imageResId != -1) {
+                slides.add(new Slide(imageResId, cardNames[randomIndex], cardDescriptions[randomIndex]));
+            }
+        }
+        viewPager.setAdapter(new SlidePagerAdapter(this, slides));
+    }
     public void backToMain(View v) {
         Intent intent = new Intent(PredictionActivity.this, MainActivity.class);
         startActivity(intent);
