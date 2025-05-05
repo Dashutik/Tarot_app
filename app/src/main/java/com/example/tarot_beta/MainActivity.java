@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity { ;
             }
         });
     }
-    public void startPrediction(View v) {
-        Intent intent = new Intent(MainActivity.this, PredictionActivity.class);
+    public void startPredictions(View v) {
+        Intent intent = new Intent(MainActivity.this, PredictionsActivity.class);
         startActivity(intent);
     };
 }

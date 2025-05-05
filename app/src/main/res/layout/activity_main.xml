@@ -19,7 +19,7 @@
         android:fontFamily="@font/alientz_trial_serif"
         android:minWidth="120dp"
         android:minHeight="48dp"
-        android:onClick="startPrediction"
+        android:onClick="startPredictions"
         android:text="Начть гадание"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
