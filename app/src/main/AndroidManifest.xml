@@ -18,6 +18,9 @@
         <activity
             android:name=".PredictionsActivity"
             android:exported="false" />
+        <activity
+            android:name=".YesNoPredictionActivity"
+            android:exported="false" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ResultActivity" />
         <activity

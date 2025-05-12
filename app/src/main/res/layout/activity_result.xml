@@ -4,34 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#070707"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Правильных ответов: 0"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:gravity="center"/>
+        android:fontFamily="@font/alientz_trial_serif"
+        android:textColor="#D9CFCF" />
 
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Начать заново"
         android:layout_marginTop="24dp"
         android:minWidth="120dp"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:text="Начать заново"
+        android:fontFamily="@font/alientz_trial_serif"
+        android:textColor="#D9CFCF" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="backToMain"
+        android:text="На главное меню"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:text="На главное меню" />
+        android:fontFamily="@font/alientz_trial_serif"
+        android:textColor="#D9CFCF" />
 
 </LinearLayout>

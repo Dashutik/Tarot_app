@@ -30,4 +30,8 @@ public class PredictionsActivity extends AppCompatActivity{
         Intent intent = new Intent(PredictionsActivity.this, YesNoPredictionActivity.class);
         startActivity(intent);
     };
+    public void backToMain(View v) {
+        Intent intent = new Intent(PredictionsActivity.this, MainActivity.class);
+        startActivity(intent);
+    };
 }
