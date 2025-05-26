@@ -1,19 +1,10 @@
 package com.example.tarot_beta;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class PredictionsActivity extends AppCompatActivity{
     @Override
@@ -22,7 +13,7 @@ public class PredictionsActivity extends AppCompatActivity{
         setContentView(R.layout.predictions);
     }
     public void startPrediction(View v) {
-        Intent intent = new Intent(PredictionsActivity.this, PredictionActivity.class);
+        Intent intent = new Intent(PredictionsActivity.this, ThreeCardsPredictionActivity.class);
         startActivity(intent);
     };
 

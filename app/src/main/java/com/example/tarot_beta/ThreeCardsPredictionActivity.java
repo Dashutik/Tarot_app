@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class PredictionActivity extends AppCompatActivity {
+public class ThreeCardsPredictionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class PredictionActivity extends AppCompatActivity {
 
         ViewPager2 viewPager = findViewById(R.id.cardImageView);
         @SuppressLint("Recycle") TypedArray imageArray = getResources().obtainTypedArray(R.array.tarot_card_images);
+        //с .recycle() подчеркивается красным
         String[] cardNames = getResources().getStringArray(R.array.tarot_card_names);
         String[] cardDescriptions = getResources().getStringArray(R.array.tarot_card_descriptions);
 
@@ -44,7 +45,7 @@ public class PredictionActivity extends AppCompatActivity {
         viewPager.setAdapter(new SlidePagerAdapter(this, slides));
     }
     public void backToMain(View v) {
-        Intent intent = new Intent(PredictionActivity.this, MainActivity.class);
+        Intent intent = new Intent(ThreeCardsPredictionActivity.this, MainActivity.class);
         startActivity(intent);
     };
 

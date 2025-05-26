@@ -8,7 +8,7 @@
     android:background="#090808"
     android:defaultFocusHighlightEnabled="true"
     android:fadingEdge="none"
-    tools:context=".PredictionActivity">
+    tools:context=".ThreeCardsPredictionActivity">
 
     <ImageView
         android:id="@+id/imageView4"

@@ -31,7 +31,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button btnSubmit;
 
     // Данные викторины
-    private List<QuizQuestion> questions = new ArrayList<>();
+    private final List<QuizQuestion> questions = new ArrayList<>();
 
     public List<QuizQuestion> getQuestions() {
         return questions;

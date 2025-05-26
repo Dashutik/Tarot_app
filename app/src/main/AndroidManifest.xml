@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Tarot_Beta"
         tools:targetApi="31">
         <activity
-            android:name=".PredictionActivity"
+            android:name=".ThreeCardsPredictionActivity"
             android:exported="false" />
         <activity
             android:name=".PredictionsActivity"
